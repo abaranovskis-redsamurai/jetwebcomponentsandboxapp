@@ -1,0 +1,11 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <table-redsam id="t1" restbackendurl="[[urlEmployees]]"
+    keyval="[[keyEmployees]]" pagesize="[[pagesizeEmployees]]"
+    columns="[[tableColumns]]" on-handle-selection="[[handleTableRowSelection]]">
+    <oj-button slot="toolbar" on-click="[[testMethodCall]]">Call Method</oj-button>
+  </table-redsam>
+</div>

@@ -1,0 +1,63 @@
+{
+  "name": "table-redsam",
+  "displayName": "table-redsam",
+  "description": "Describe your component here",
+  "version": "1.0.0",
+  "jetVersion": "^4.1.0",
+  "properties": {
+    "restbackendurl": {
+      "description": "REST Backend URL",
+      "type": "string"
+    },
+    "keyval": {
+      "description": "REST Backend Key",
+      "type": "string"
+    },
+    "pagesize": {
+      "description": "REST Backend Page Size",
+      "type": "number"
+    },
+    "columns": {
+      "description": "Column structure",
+      "type": "array",
+      "writeback": false,
+      "properties": {
+        "headerText": {
+          "description": "Column header name",
+          "type": "string"
+        },
+        "field": {
+          "description": "Column attribute mapping",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "methods": {
+    "testMethod": {
+        "description": "Test method",
+        "params": [{
+            "name": "param",
+            "description": "Parameter",
+            "type": "object"
+        }]
+    }
+  },
+  "events": {
+    "handleSelection": {
+      "description": "Triggered when table row is selected",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "Selected row key",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "slots": {
+    "toolbar": {
+      "description": "Placeholder for table buttons"
+    }
+  }
+}

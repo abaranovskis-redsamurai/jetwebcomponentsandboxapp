@@ -1,0 +1,19 @@
+<!--
+  Copyright (c) 2015, 2017, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+<div class="oj-panel oj-margin">
+    <div class="oj-lg-float-end" id='btc1'>
+      <oj-bind-slot name="toolbar">
+      </oj-bind-slot>
+    </div>
+    <oj-table id='t1' aria-label='Employees Table'
+           data='[[pagingDatasource]]'
+           columns='[[tableColumns]]'
+           selection-mode.row='single'
+           on-selection-changed='[[rowSelectionListener]]'
+           style='width: 100%;'>
+        <oj-paging-control id="pg1" data='[[pagingDatasource]]' page-size='[[pageSize]]' slot='bottom'>
+        </oj-paging-control>
+    </oj-table>
+</div>
